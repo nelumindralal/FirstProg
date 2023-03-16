@@ -9,12 +9,12 @@ public class UseAccount {
         wife = new Account();
         habby = new Account();
 
-        wife.name = "Manori Herath";
-        wife.address = "Thewatte Road, Ragama";
+        wife.name = "ABC";
+        wife.address = "xyz";
         wife.balance = 10000;
 
-        habby.name = "Nelum Thushara";
-        habby.address = "Hermannsburger weg 39";
+        habby.name = "PQR";
+        habby.address = "lmn";
         habby.balance = 4000;
 
         System.out.println(wife.name +" ("+ wife.address+ ")" + " has $ "+ wife.balance);
