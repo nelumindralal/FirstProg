@@ -17,12 +17,11 @@ public class MortgageCalculator {
 
         System.out.print("Principle amount ($1K - $1M) in $ : ");
         principalAmount = sc.nextInt();
-
-        while(principalAmount < 1000 || principalAmount > 10000000 ){
-            System.out.print("Enter a number between 1,000 to 10,000,000");
-            System.out.print("Principle amount ($1K - $1M) in $ : ");
-            principalAmount = sc.nextInt();
-        }
+            while(principalAmount < 1_000 || principalAmount > 10_000_000 ){
+                System.out.print("Enter a number between 1,000 to 10,000,000");
+                System.out.print("Principle amount ($1K - $1M) in $ : ");
+                principalAmount = sc.nextInt();
+            }
 
         System.out.print("Annual interest rate : ");
         interestRate = sc.nextFloat();
