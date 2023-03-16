@@ -16,18 +16,35 @@ public class MortgageCalculator {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
-        System.out.print("Principle amount in $ : ");
+
+        System.out.print("Principle amount ($1K - $1M) in $ : ");
         principalAmount = sc.nextInt();
+
+        while(principalAmount < 1000 || principalAmount > 10000000 ){
+            System.out.print("Enter a number between 1,000 to 10,000,000");
+            System.out.print("Principle amount ($1K - $1M) in $ : ");
+            principalAmount = sc.nextInt();
+        }
 
         System.out.print("Annual interest rate : ");
         interestRate = sc.nextFloat();
+            while(interestRate < 0 || interestRate > 30){
+                System.out.println("Enter a value greater than 0 and less than 30");
+                System.out.print("Annual interest rate : ");
+                interestRate = sc.nextFloat();
+            }
 
-        System.out.print("Period : ");
+        System.out.print("Period ( Years) : ");
         noOfYears = sc.nextInt();
+            while(noOfYears <1 || noOfYears > 30){
+                System.out.println("Enter a value between 1 and 30");
+                System.out.print("Period ( Years) : ");
+                noOfYears = sc.nextInt();
+            }
 
         // print results on terminal
         String mortgageAmountFormatted = NumberFormat.getCurrencyInstance().format(mortgageCalc());
-        System.out.print("Mortgage is: " + mortgageAmountFormatted);
+        System.out.print("Mortgage ( Monthly Installment) : " + mortgageAmountFormatted);
 
     }
 
