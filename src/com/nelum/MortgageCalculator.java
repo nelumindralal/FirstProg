@@ -12,10 +12,8 @@ public class MortgageCalculator {
     public static final byte MONTHS_IN_YEAR = 12;
     public static final byte PERCENT = 100;
 
-
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-
 
         System.out.print("Principle amount ($1K - $1M) in $ : ");
         principalAmount = sc.nextInt();
@@ -54,7 +52,6 @@ public class MortgageCalculator {
         int noOfMonths = noOfYears * MONTHS_IN_YEAR;
         mortgageAmount = principalAmount * monthlyRate * Math.pow((monthlyRate + 1),
                 noOfMonths)/(Math.pow((1+monthlyRate),noOfMonths) -1) ;
-
 
         return mortgageAmount;
     }
